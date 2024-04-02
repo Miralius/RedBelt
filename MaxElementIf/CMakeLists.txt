@@ -1,0 +1,1 @@
+add_executable(MaxElementIf main.cpp)
