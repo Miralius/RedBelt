@@ -6,3 +6,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 
 add_subdirectory(MaxElementIf)
 add_subdirectory(MacrosLog)
+add_subdirectory(ComparatorGenerator)
