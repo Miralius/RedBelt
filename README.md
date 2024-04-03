@@ -11,3 +11,5 @@ Red belt stepik C++ course's solutions
         - Step 11: ["`UPDATE_FIELD` macro"](UpdateFieldMacro/update_field.cpp)
         - Step 12: ["Bad macro"](BadMacro/print_values.cpp)
         - Step 13: ["`UNIQ_ID`"](UniqId/uniq_id.cpp)
+    - Point 1.6: Class templates. Part 2
+        - Step 1: ["Table"](Table/table.cpp)
