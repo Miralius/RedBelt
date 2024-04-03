@@ -1,0 +1,1 @@
+add_executable(BadMacro print_values.cpp)
