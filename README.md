@@ -10,3 +10,4 @@ Red belt stepik C++ course's solutions
         - Step 10: ["Comparator generator"](ComparatorGenerator/sort_by.cpp)
         - Step 11: ["`UPDATE_FIELD` macro"](UpdateFieldMacro/update_field.cpp)
         - Step 12: ["Bad macro"](BadMacro/print_values.cpp)
+        - Step 13: ["`UNIQ_ID`"](UniqId/uniq_id.cpp)

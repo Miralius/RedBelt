@@ -1,0 +1,1 @@
+add_executable(UniqId uniq_id.cpp)
