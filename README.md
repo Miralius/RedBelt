@@ -8,3 +8,4 @@ Red belt stepik C++ course's solutions
     - Point 1.4: Macros. Part 2
         - Step 9: ["Macro `LOG`"](MacrosLog/log.cpp)
         - Step 10: ["Comparator generator"](ComparatorGenerator/sort_by.cpp)
+        - Step 11: ["`UPDATE_FIELD` macro"](UpdateFieldMacro/update_field.cpp)
