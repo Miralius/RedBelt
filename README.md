@@ -14,3 +14,4 @@ Red belt stepik C++ course's solutions
     - Point 1.6: Class templates. Part 2
         - Step 1: ["Table"](Table/table.cpp)
         - Step 2: ["Deque"](Deque/Deque.h)
+        - Step 11: ["`Paginator` template"](PaginatorTemplate/paginator.cpp)

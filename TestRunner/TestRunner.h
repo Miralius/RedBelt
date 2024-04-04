@@ -95,11 +95,11 @@ private:
     int fail_count = 0;
 };
 
-#define ASSERT_EQUAL(x, y) {            \
-  ostringstream os;                     \
-  os << #x << " != " << #y << ", "      \
-    << __FILE__ << ":" << __LINE__;     \
-  AssertEqual(x, y, os.str());          \
+#define ASSERT_EQUAL(x, y) {                    \
+  ostringstream assert_equal_os;                \
+  assert_equal_os << #x << " != " << #y << ", " \
+    << __FILE__ << ":" << __LINE__;             \
+  AssertEqual(x, y, assert_equal_os.str());     \
 }
 
 #define ASSERT(x) {                     \

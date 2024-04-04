@@ -1,0 +1,1 @@
+add_executable(PaginatorTemplate paginator.cpp)
