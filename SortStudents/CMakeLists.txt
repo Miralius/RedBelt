@@ -1,0 +1,1 @@
+add_executable(SortStudents sort_students.cpp student.h)

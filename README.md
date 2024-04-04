@@ -15,3 +15,6 @@ Red belt stepik C++ course's solutions
         - Step 1: ["Table"](Table/table.cpp)
         - Step 2: ["Deque"](Deque/Deque.h)
         - Step 11: ["`Paginator` template"](PaginatorTemplate/paginator.cpp)
+- Week 2: Code optimization, algorithm complexity, and efficiency input/output
+    - Point 2.1: Code optimization principles
+        - Step 6: ["Sort students by rate"](SortStudents/sort_students.cpp)
