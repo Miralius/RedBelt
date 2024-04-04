@@ -13,3 +13,4 @@ Red belt stepik C++ course's solutions
         - Step 13: ["`UNIQ_ID`"](UniqId/uniq_id.cpp)
     - Point 1.6: Class templates. Part 2
         - Step 1: ["Table"](Table/table.cpp)
+        - Step 2: ["Deque"](Deque/Deque.h)
