@@ -18,3 +18,4 @@ Red belt stepik C++ course's solutions
 - Week 2: Code optimization, algorithm complexity, and efficiency input/output
     - Point 2.1: Code optimization principles
         - Step 6: ["Sort students by rate"](SortStudents/sort_students.cpp)
+        - Step 7: ["New language learning"](Learner/learner.cpp)
