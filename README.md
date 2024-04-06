@@ -19,3 +19,5 @@ Red belt stepik C++ course's solutions
     - Point 2.1: Code optimization principles
         - Step 6: ["Sort students by rate"](SortStudents/sort_students.cpp)
         - Step 7: ["New language learning"](Learner/learner.cpp)
+    - Point 2.4: Algorithm complexity. Part 2
+        - Step 1: ["Expresses"](Expresses/slow.cpp)
