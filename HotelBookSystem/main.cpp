@@ -28,6 +28,13 @@ public:
         const auto hotelIt = _clientIdCounterDoubleMap.find(hotelName);
         return hotelIt != _clientIdCounterDoubleMap.cend() ? hotelIt->second.size() : 0u;
     }
+
+    [[nodiscard]] RoomCountSum Rooms(const HotelName& hotelName) const
+    {
+        const auto hotelIt = _roomCountMap.find(hotelName);
+        return hotelIt != _roomCountMap.cend() ? hotelIt->second: 0u;
+    }
+
 private:
     void adjustRoomCount(const TimePoint& time, const HotelName& hotelName, const RoomCount& roomCount)
     {
@@ -98,6 +105,12 @@ int main() {
             HotelName hotelName;
             cin >> hotelName;
             cout << system.Clients(hotelName) << '\n';
+        }
+        else if (queryType == "ROOMS")
+        {
+            HotelName hotelName;
+            cin >> hotelName;
+            cout << system.Rooms(hotelName) << '\n';
         }
     }
 
