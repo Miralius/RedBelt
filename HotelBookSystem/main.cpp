@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <map>
 #include <deque>
+#include <limits>
 
 using namespace std;
 using TimePoint = int64_t;
@@ -19,43 +20,52 @@ class HotelBookSystem
 public:
     void Book(const TimePoint& time, const HotelName& hotelName, const ClientId& clientId, const RoomCount& roomCount)
     {
-        adjustRoomCount(time, hotelName, roomCount);
-        adjustClients(time, hotelName, clientId);
+        _timeRoomCountDequeMap[hotelName].emplace_back(time, roomCount);
+        _roomCountMap[hotelName] += roomCount;
+        _timeClientIdDequeMap[hotelName].emplace_back(time, clientId);
+        _clientIdCounterDoubleMap[hotelName][clientId]++;
+        _lastTime = time;
     }
 
-    [[nodiscard]] uint32_t Clients(const HotelName& hotelName) const
+    [[nodiscard]] uint32_t Clients(const HotelName& hotelName)
     {
         const auto hotelIt = _clientIdCounterDoubleMap.find(hotelName);
-        return hotelIt != _clientIdCounterDoubleMap.cend() ? hotelIt->second.size() : 0u;
+        if (hotelIt != _clientIdCounterDoubleMap.cend())
+        {
+            adjustClients(hotelName);
+            return hotelIt->second.size();
+        }
+        return 0;
     }
 
-    [[nodiscard]] RoomCountSum Rooms(const HotelName& hotelName) const
+    [[nodiscard]] RoomCountSum Rooms(const HotelName& hotelName)
     {
         const auto hotelIt = _roomCountMap.find(hotelName);
-        return hotelIt != _roomCountMap.cend() ? hotelIt->second: 0u;
+        if (hotelIt != _roomCountMap.cend())
+        {
+            adjustRoomCount(hotelName);
+            return hotelIt->second;
+        }
+        return 0;
     }
 
 private:
-    void adjustRoomCount(const TimePoint& time, const HotelName& hotelName, const RoomCount& roomCount)
+    void adjustRoomCount(const HotelName& hotelName)
     {
         auto& timeRoomCountDeque = _timeRoomCountDequeMap[hotelName];
-        timeRoomCountDeque.emplace_back(time, roomCount);
         auto& roomCountSum = _roomCountMap[hotelName];
-        roomCountSum += roomCount;
-        while (timeRoomCountDeque.front().first + historyDuration <= time)
+        while (timeRoomCountDeque.front().first + historyDuration <= _lastTime)
         {
             roomCountSum -= timeRoomCountDeque.front().second;
             timeRoomCountDeque.pop_front();
         }
     }
 
-    void adjustClients(const TimePoint& time, const HotelName& hotelName, const ClientId& clientId)
+    void adjustClients(const HotelName& hotelName)
     {
         auto& timeClientIdDeque = _timeClientIdDequeMap[hotelName];
-        timeClientIdDeque.emplace_back(time, clientId);
         auto& hotelClients = _clientIdCounterDoubleMap[hotelName];
-        hotelClients[clientId]++;
-        while (timeClientIdDeque.front().first + historyDuration <= time)
+        while (timeClientIdDeque.front().first + historyDuration <= _lastTime)
         {
             const auto frontClientId = timeClientIdDeque.front().second;
             auto clientIt = hotelClients.find(frontClientId);
@@ -71,14 +81,15 @@ private:
     map<HotelName, RoomCountSum> _roomCountMap;
     map<HotelName, deque<pair<TimePoint, ClientId>>> _timeClientIdDequeMap;
     map<HotelName, map<ClientId, size_t /* counter */>> _clientIdCounterDoubleMap;
+    TimePoint _lastTime = numeric_limits<int64_t>::min();
 };
 
 int main() {
     // Для ускорения чтения данных отключается синхронизация
     // cin и cout с stdio,
     // а также выполняется отвязка cin от cout
-//    ios::sync_with_stdio(false);
-//    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     HotelBookSystem system;
 
