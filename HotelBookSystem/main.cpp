@@ -22,6 +22,12 @@ public:
         adjustRoomCount(time, hotelName, roomCount);
         adjustClients(time, hotelName, clientId);
     }
+
+    [[nodiscard]] uint32_t Clients(const HotelName& hotelName) const
+    {
+        const auto hotelIt = _clientIdCounterDoubleMap.find(hotelName);
+        return hotelIt != _clientIdCounterDoubleMap.cend() ? hotelIt->second.size() : 0u;
+    }
 private:
     void adjustRoomCount(const TimePoint& time, const HotelName& hotelName, const RoomCount& roomCount)
     {
@@ -86,6 +92,12 @@ int main() {
             RoomCount roomCount;
             cin >> roomCount;
             system.Book(time, hotelName, clientId, roomCount);
+        }
+        else if (queryType == "CLIENTS")
+        {
+            HotelName hotelName;
+            cin >> hotelName;
+            cout << system.Clients(hotelName) << '\n';
         }
     }
 
