@@ -22,3 +22,4 @@ Red belt stepik C++ course's solutions
     - Point 2.4: Algorithm complexity. Part 2
         - Step 1: ["Expresses"](Expresses/slow.cpp)
         - Step 2: ["E-book"](EBook/slow.cpp)
+        - Step 3: ["Hotel book system"](HotelBookSystem/main.cpp)
