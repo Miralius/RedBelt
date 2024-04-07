@@ -1,57 +1,43 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
-#include <set>
-#include <map>
-#include <numeric>
 
 using namespace std;
 
 class ReadingManager {
+    using UserId = unsigned;
+    using PageNumber = unsigned short;
+    static constexpr UserId max_user_count = 100000;
+    static constexpr PageNumber max_page_count = 1000;
 public:
     ReadingManager()
-            : _users_per_page(vector<set<UserId>>(1000)) {}
+            : _cumulative_sum_user_per_page([] {
+        auto result_vector = vector<UserId>(max_page_count + 1);
+        result_vector.at(0) = max_user_count;
+        return result_vector;
+    }()), _pages_per_user(vector<PageNumber>(max_user_count + 1)) {}
 
     void Read(int user_id, int page_count) {
-        --page_count; // use page_count as index
-        auto user_it = _pages_per_user.find(user_id);
-        if (user_it == _pages_per_user.cend())
-        {
-            _pages_per_user.insert({ user_id, page_count }); // O(log (all_users))
-            _users_per_page[page_count].insert(user_id); // O(log (all_users))
-        }
-        else
-        {
-            auto& page_count_ref = user_it->second;
-            _users_per_page[page_count_ref].erase(user_id); // O(log (all_pages))
-            page_count_ref = page_count;
-            _users_per_page[page_count].insert(user_id); // O(log (all_pages))
-        }
+        (void) user_id;
+        (void) page_count;
     }
 
     [[nodiscard]] double Cheer(int user_id) const {
-        const auto user_it = _pages_per_user.find(user_id);
-        if (user_it == _pages_per_user.cend())
+        if (_pages_per_user[user_id] == 0)
         {
             return 0.;
         }
-        else
-        {
-            const auto end = _users_per_page.cbegin() + user_it->second;
-            const auto count = accumulate(_users_per_page.cbegin(), end, 0u, [](const auto lhs, const auto rhs)
-            {
-                return lhs + rhs.size();
-            });
-            const auto all_users_without_current = _pages_per_user.size() - 1;
-            return all_users_without_current ? count / static_cast<double>(all_users_without_current) : 1.;
-        }
+        return 1.;
     }
 
 private:
-    using UserId = unsigned;
-    using PageNumber = unsigned short;
-    vector<set<UserId>> _users_per_page;
-    map<UserId, PageNumber> _pages_per_user;
+    void recalculate_cumulative_sums(const PageNumber page_count, const bool isNewUser) {
+        (void) page_count;
+        (void) isNewUser;
+    }
+
+    vector<UserId> _cumulative_sum_user_per_page;
+    vector<PageNumber> _pages_per_user;
 };
 
 
