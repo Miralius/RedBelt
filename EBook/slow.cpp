@@ -18,22 +18,45 @@ public:
     }()), _pages_per_user(vector<PageNumber>(max_user_count + 1)) {}
 
     void Read(int user_id, int page_count) {
-        (void) user_id;
-        (void) page_count;
+        if (isNewUser(user_id))
+        {
+            _pages_per_user[user_id] = page_count;
+            recalculate_cumulative_sums(page_count, true);
+        }
     }
 
     [[nodiscard]] double Cheer(int user_id) const {
-        if (_pages_per_user[user_id] == 0)
+        if (isNewUser(user_id))
         {
             return 0.;
         }
-        return 1.;
+        else if (userCount() == 1)
+        {
+            return 1.;
+        }
+        return {};
     }
 
 private:
+    [[nodiscard]] UserId userCount() const
+    {
+        return max_user_count - _cumulative_sum_user_per_page[0];
+    }
+
+    [[nodiscard]] bool isNewUser(const int userId) const
+    {
+        return _pages_per_user[userId] == 0;
+    }
+
     void recalculate_cumulative_sums(const PageNumber page_count, const bool isNewUser) {
-        (void) page_count;
-        (void) isNewUser;
+        if (isNewUser)
+        {
+            --_cumulative_sum_user_per_page[0];
+        }
+        else
+        {
+            (void) page_count;
+        }
     }
 
     vector<UserId> _cumulative_sum_user_per_page;
@@ -45,8 +68,8 @@ int main() {
     // Для ускорения чтения данных отключается синхронизация
     // cin и cout с stdio,
     // а также выполняется отвязка cin от cout
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+//    ios::sync_with_stdio(false);
+//    cin.tie(nullptr);
 
     ReadingManager manager;
 
