@@ -21,3 +21,4 @@ Red belt stepik C++ course's solutions
         - Step 7: ["New language learning"](Learner/learner.cpp)
     - Point 2.4: Algorithm complexity. Part 2
         - Step 1: ["Expresses"](Expresses/slow.cpp)
+        - Step 2: ["E-book"](EBook/slow.cpp)
