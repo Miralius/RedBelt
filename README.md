@@ -26,3 +26,4 @@ Red belt stepik C++ course's solutions
 - Week 4: C++ memory model
     - Point 4.1: Memory model
         - Step 7: ["Object pool"](ObjectPool/object_pool.cpp)
+        - Step 11: ["Swap, SortPointers, ReversedCopy"](SwapSortCopy/swap_sort_copy.cpp)
