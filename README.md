@@ -23,3 +23,6 @@ Red belt stepik C++ course's solutions
         - Step 1: ["Expresses"](Expresses/slow.cpp)
         - Step 2: ["E-book"](EBook/slow.cpp)
         - Step 3: ["Hotel book system"](HotelBookSystem/main.cpp)
+- Week 4: C++ memory model
+    - Point 4.1: Memory model
+        - Step 7: ["Object pool"](ObjectPool/object_pool.cpp)
