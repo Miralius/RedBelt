@@ -27,3 +27,4 @@ Red belt stepik C++ course's solutions
     - Point 4.1: Memory model
         - Step 7: ["Object pool"](ObjectPool/object_pool.cpp)
         - Step 11: ["Swap, SortPointers, ReversedCopy"](SwapSortCopy/swap_sort_copy.cpp)
+        - Step 12: ["Simple vector"](SimpleVector/simple_vector.h)
