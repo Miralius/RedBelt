@@ -32,3 +32,5 @@ Red belt stepik C++ course's solutions
 - Week 5: Linear container efficiency using
     - Point 5.2: Linear container efficiency using. Part 2
         - Step 13: ["Sportsmen"](Sportsmen/main.cpp)
+    - Point 5.3: Linear container efficiency using. Part 3
+        - Step 1: ["`StackVector`"](StackVector/stack_vector.h)
