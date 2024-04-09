@@ -35,3 +35,4 @@ Red belt stepik C++ course's solutions
     - Point 5.3: Linear container efficiency using. Part 3
         - Step 1: ["`StackVector`"](StackVector/stack_vector.h)
         - Step 9: ["`Translator`"](Translator/translator.cpp)
+        - Step 10: ["`AirportCounter`"](AirportCounter/airport_counter.cpp)
