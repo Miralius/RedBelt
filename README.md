@@ -29,3 +29,6 @@ Red belt stepik C++ course's solutions
         - Step 11: ["Swap, SortPointers, ReversedCopy"](SwapSortCopy/swap_sort_copy.cpp)
         - Step 12: ["Simple vector"](SimpleVector/simple_vector.h)
         - Step 15: ["Linked list"](LinkedList/linked_list.cpp)
+- Week 5: Linear container efficiency using
+    - Point 5.2: Linear container efficiency using. Part 2
+        - Step 13: ["Sportsmen"](Sportsmen/main.cpp)
