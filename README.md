@@ -34,3 +34,4 @@ Red belt stepik C++ course's solutions
         - Step 13: ["Sportsmen"](Sportsmen/main.cpp)
     - Point 5.3: Linear container efficiency using. Part 3
         - Step 1: ["`StackVector`"](StackVector/stack_vector.h)
+        - Step 9: ["`Translator`"](Translator/translator.cpp)

@@ -1,0 +1,1 @@
+add_executable(Translator translator.cpp)
