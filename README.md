@@ -36,3 +36,4 @@ Red belt stepik C++ course's solutions
         - Step 1: ["`StackVector`"](StackVector/stack_vector.h)
         - Step 9: ["`Translator`"](Translator/translator.cpp)
         - Step 10: ["`AirportCounter`"](AirportCounter/airport_counter.cpp)
+        - Step 11: ["Text `Editor`"](TextEditor/text_editor.cpp)

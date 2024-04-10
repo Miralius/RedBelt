@@ -1,0 +1,1 @@
+add_executable(TextEditor text_editor.cpp)
