@@ -37,3 +37,4 @@ Red belt stepik C++ course's solutions
         - Step 9: ["`Translator`"](Translator/translator.cpp)
         - Step 10: ["`AirportCounter`"](AirportCounter/airport_counter.cpp)
         - Step 11: ["Text `Editor`"](TextEditor/text_editor.cpp)
+        - Step 12: ["Web server stats"](WebServerStats)
