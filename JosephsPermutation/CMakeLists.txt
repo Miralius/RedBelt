@@ -1,0 +1,1 @@
+add_executable(JosephsPermutation josephs_permutation.cpp)

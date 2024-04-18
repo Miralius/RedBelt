@@ -38,3 +38,6 @@ Red belt stepik C++ course's solutions
         - Step 10: ["`AirportCounter`"](AirportCounter/airport_counter.cpp)
         - Step 11: ["Text `Editor`"](TextEditor/text_editor.cpp)
         - Step 12: ["Web server stats"](WebServerStats)
+- Week 6: Move-semantics and general multithreading
+    - Point 6.1: Move-semantics
+        - Step 7: ["Josephs permutation"](JosephsPermutation/josephs_permutation.cpp)
