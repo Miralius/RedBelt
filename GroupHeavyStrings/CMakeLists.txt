@@ -1,0 +1,1 @@
+add_executable(GroupHeavyStrings ground_heavy_strings.cpp)

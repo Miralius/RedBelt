@@ -41,3 +41,4 @@ Red belt stepik C++ course's solutions
 - Week 6: Move-semantics and general multithreading
     - Point 6.1: Move-semantics
         - Step 7: ["Josephs permutation"](JosephsPermutation/josephs_permutation.cpp)
+        - Step 8: ["Group heavy strings"](GroupHeavyStrings/ground_heavy_strings.cpp)
