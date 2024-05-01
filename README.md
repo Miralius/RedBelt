@@ -43,3 +43,5 @@ Red belt stepik C++ course's solutions
         - Step 7: ["Josephs permutation"](JosephsPermutation/josephs_permutation.cpp)
         - Step 8: ["Group heavy strings"](GroupHeavyStrings/ground_heavy_strings.cpp)
         - Step 10: ["`SimpleVector` copy-assignment operator"](SimpleVectorCopyAssignment/simple_vector_copy_assignment.cpp)
+    - Point 6.2: Move-semantics. Part 2
+        - Step 3: ["Split into sentences"](SplitIntoSentences/split_into_sentences.cpp)

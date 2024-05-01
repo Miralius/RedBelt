@@ -1,0 +1,1 @@
+add_executable(SplitIntoSentences split_into_sentences.cpp)
