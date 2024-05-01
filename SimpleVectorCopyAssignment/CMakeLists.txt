@@ -1,0 +1,1 @@
+add_executable(SimpleVectorCopyAssignment simple_vector_copy_assignment.cpp simple_vector.h)

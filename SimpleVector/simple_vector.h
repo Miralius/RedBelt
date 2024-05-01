@@ -45,7 +45,8 @@ public:
   {
       return _capacity;
   }
-  void PushBack(const T& value)
+
+    [[maybe_unused]] void PushBack(const T& value)
   {
       if (_size >= _capacity) {
           auto newCapacity = _capacity == 0 ? 1 : 2 * _capacity;
