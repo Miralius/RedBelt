@@ -1,0 +1,1 @@
+add_executable(SimpleVectorMoveSemantics simple_vector_2.h simple_vector_2.cpp)

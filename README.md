@@ -45,3 +45,4 @@ Red belt stepik C++ course's solutions
         - Step 10: ["`SimpleVector` copy-assignment operator"](SimpleVectorCopyAssignment/simple_vector_copy_assignment.cpp)
     - Point 6.2: Move-semantics. Part 2
         - Step 3: ["Split into sentences"](SplitIntoSentences/split_into_sentences.cpp)
+        - Step 12: ["`SimpleVector` move-semantics"](SimpleVectorMoveSemantics/simple_vector_2.h)
