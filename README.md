@@ -46,3 +46,4 @@ Red belt stepik C++ course's solutions
     - Point 6.2: Move-semantics. Part 2
         - Step 3: ["Split into sentences"](SplitIntoSentences/split_into_sentences.cpp)
         - Step 12: ["`SimpleVector` move-semantics"](SimpleVectorMoveSemantics/simple_vector_2.h)
+        - Step 13: ["Merge sort 3"](MergeSort3/merge_sort_3.cpp)
