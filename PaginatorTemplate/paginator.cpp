@@ -1,4 +1,8 @@
-#if __GNUC__ == 13 && __GNUC_MINOR__ == 2
+#if __GNUC__ < 13
+#define STEPIK_CHECK_SYSTEM
+#endif
+
+#ifndef STEPIK_CHECK_SYSTEM
 
 #include "../TestRunner/TestRunner.h"
 
